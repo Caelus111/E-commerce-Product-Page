@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Sneakers || Sneaker Company</title>
+  </head>
+  <body class="font-kumbh">
+    <!-- Navigation -->
+    <nav class="md:container relative mx-auto px-5 py-5 md:py-6 border-b-2">
+      <!-- flex container -->
+      <div class="w-full flex flex-row items-center justify-start space-x-5">
+        <!-- Hamburger Icon -->
+        <button id="menu-btn" class="block hamburger md:hidden z-10">
+          <img class="menu-icon w-6" src="img/icon-menu.svg" alt="" />
+          <img class="hidden close w-6" src="img/icon-close.svg" alt="" />
+        </button>
+        <!-- Logo -->
+        <div>
+          <img
+            class="scale-[1.5] md:scale-100 ml-3 md:ml-0"
+            src="img/logo.svg"
+            alt=""
+          />
+        </div>
+
+        <!-- List Item -->
+        <div
+          class="w-full flex flex-row items-center justify-center list-items"
+        >
+          <!-- Links -->
+          <ul
+            class="hidden space-x-5 mx-4 font-medium text-DarkGrayishBlue md:flex md:space-x-10"
+          >
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Collections
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 hover:text-blackafter:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Men
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Women
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                About
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Profile / card -->
+          <div
+            class="relative flex flex-row items-center justify-center ml-auto space-x-5 lg:space-x-10"
+          >
+            <i
+              id="cart"
+              class="relative fa-solid fa-cart-shopping text-2xl text-DarkGrayishBlue hover:text-black cursor-pointer"
+            ></i>
+            <img
+              class="size-10 md:size-[40%] cursor-pointer hover:border-Orange hover:border-2 hover:rounded-full"
+              src="img/image-avatar.png"
+              alt=""
+            />
+            <!-- Cart menu -->
+            <div
+              class="hidden absolute w-[380px] h-[260px] bg-white mx-auto top-[180%] left-[0%] translate-x-[-80%] rounded-xl drop-shadow-xl sm:-left-10 md:top-[100%] md:left-20"
+              id="cart-menu"
+            >
+              <div class="p-5 border-b-2">
+                <h3 class="font-bold">Cart</h3>
+              </div>
+
+              <div
+                id="cart-content"
+                class="p-8 text-center text-DarkGrayishBlue"
+              >
+                <p>Your cart is empty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden transition-transform">
+        <!-- List Item -->
+        <div
+          id="menu"
+          class="absolute hidden flex-col w-[75%] min-h-dvh items-start justify-start top-0 left-0 py-[5em] bg-white shadow-0"
+        >
+          <!-- Links -->
+          <ul class="space-y-5 mx-4 font-bold text-xl text-black">
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Collections
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 hover:text-blackafter:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Men
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Women
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                About
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#"
+                class="after:content-[''] after:absolute after:h-2 after:w-full md:after:-bottom-[30px] lg:after:-bottom-[48px] after:left-0 after:bg-Orange after:scale-x-0 after:transition-transform after:origin-left hover:after:block hover:after:scale-x-100 hover:text-black"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Page mobile Container -->
+    <section id="main-menu">
+      <!-- flex container -->
+      <div class="container flex flex-col mx-auto md:my-[89px] md:flex-row">
+        <!-- Mobile Gallery -->
+        <div class="h-[300px] md:hidden">
+          <img class="w-full h-full" src="img/image-product-1.jpg" alt="" />
+        </div>
+
+        <!-- Desktop Gallery -->
+        <div
+          class="hidden flex-col flex-[1_1_50%] items-center justify-center space-y-8 md:flex"
+        >
+          <!-- Main Image -->
+          <div id="main-img" class="size-[445px] cursor-pointer">
+            <img 
+              
+              class="main w-full rounded-2xl" 
+              src="img/image-product-1.jpg"
+              alt=""
+            />
+            <img 
+              
+              class="main w-full rounded-2xl hidden" 
+              src="img/image-product-2.jpg"
+              alt=""
+            />
+            <img 
+              
+              class="main w-full rounded-2xl hidden" 
+              src="img/image-product-3.jpg"
+              alt=""
+            />
+            <img 
+              
+              class="main w-full rounded-2xl hidden" 
+              src="img/image-product-4.jpg"
+              alt=""
+            />
+          </div>
+
+          <!-- Thumbnail Images -->
+          <div id="thumbnails" class="flex items-center justify-between space-x-5 w-[445px]">
+            <img
+              class="main-thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+              src="img/image-product-1-thumbnail.jpg"
+              alt=""
+              onclick="currentSlide(1)"
+            />
+            <img
+              class="main-thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+              src="img/image-product-2-thumbnail.jpg"
+              alt=""
+              onclick="currentSlide(2)"
+            />
+            <img
+              class="main-thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+              src="img/image-product-3-thumbnail.jpg"
+              alt=""
+              onclick="currentSlide(3)"
+            />
+            <img
+              class="main-thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+              src="img/image-product-4-thumbnail.jpg"
+              alt=""
+              onclick="currentSlide(4)"
+            />
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div
+          class="flex flex-col flex-[1_1_35%] items-start justify-start p-5 space-y-3 md:pl-10 lg:pr-32 lg:pl-0 md:py-10 md:space-y-8"
+        >
+          <small
+            class="uppercase font-bold text-sm text-DarkGrayishBlue tracking-[2px]"
+            >Sneaker Company</small
+          >
+          <h1
+            class="capitalize font-bold text-3xl text-VeryDarkBlue md:text-5xl"
+          >
+            Fall Limited Edition Sneakers
+          </h1>
+
+          <p class="text-[15px] text-DarkGrayishBlue md:text-base">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+
+          <div class="flex items-center justify-start w-full">
+            <h3 class="font-bold text-[1.7em] mr-4 md:text-3xl">$125.00</h3>
+            <p
+              class="font-semibold text-base text-white bg-VeryDarkBlue rounded-md px-2"
+            >
+              50%
+            </p>
+            <br />
+            <p class="line-through font-semibold text-DarkGrayishBlue ml-auto">
+              $250.00
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col items-center justify-center space-y-4 w-full gap-2 md:flex-row md:space-y-0"
+          >
+            <!-- Counter -->
+            <div
+              class="flex items-center justify-around w-full font-semibold bg-LightGrayishBlue py-3 rounded-md md:flex-[1]"
+            >
+              <img
+                class="cursor-pointer hover:opacity-75"
+                src="img/icon-minus.svg"
+                id="minus"
+              />
+              <p id="count">1</p>
+              <img
+                class="cursor-pointer hover:opacity-75"
+                src="img/icon-plus.svg"
+                id="plus"
+              />
+            </div>
+
+            <!-- Button -->
+            <div class="flex items-center justify-center w-full md:flex-[2]">
+              <button
+                id="cart-btn"
+                class="bg-Orange w-full p-3 rounded-lg shadow-PaleOrange shadow-lg font-bold transition-colors hover:bg-orange-300"
+              >
+                <i class="fa-solid fa-cart-shopping mr-2"></i>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LightBox Container -->
+    <div
+      id="lightbox"
+      class="hidden fixed top-[0%] left-[50%] translate-x-[-50%] translate-y-[0%] w-full h-dvh my-auto overflow-hidden bg-BlackwithlowOpacity"
+    >
+      <!-- Desktop Gallery -->
+      <div
+        class="hidden flex-col flex-[1_1_50%] items-center justify-center space-y-8 md:flex"
+      > 
+      <!-- Main Image -->
+      <div class="relative size-[445px]">
+          <!-- Close Button -->
+          <div
+            class="absolute -top-14 right-1 cursor-pointer hover:fill-Orange "
+            id="close"
+          >
+            <i class="fa-solid fa-xmark font-bold text-white text-3xl hover:text-Orange"></i>
+          </div>
+          <!-- Arrows previous-->
+          <div id="prev"
+            class="cursor-pointer after:content-[url('../img/icon-previous.svg')] after:absolute after:-left-4 after:top-[50%] after:pt-4 after:p-3 after:bg-white after:rounded-full after:hover:bg-orange-200 transition-colors"
+            onclick="plusSlides(-1)"
+          ></div>
+          <!-- Arrows next -->
+          <div id="next"
+            class=" cursor-pointer before:content-[url('../img/icon-next.svg')] before:absolute before:-right-4 before:top-[50%] before:pt-4 before:p-3 before:bg-white before:rounded-full before:hover:bg-orange-200 transition-all"
+            onclick="plusSlides(1)"
+
+          ></div>
+          <img
+            class="main-img w-full rounded-2xl"
+            src="img/image-product-1.jpg"
+            alt=""
+          />
+          <img
+            class="main-img w-full rounded-2xl"
+            src="img/image-product-2.jpg"
+            alt=""
+          />
+          <img
+            class="main-img w-full rounded-2xl"
+            src="img/image-product-3.jpg"
+            alt=""
+          />
+          <img
+            class="main-img w-full rounded-2xl"
+            src="img/image-product-4.jpg"
+            alt=""
+          />
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div id="thumbnails" class="flex items-center justify-between space-x-5 w-[445px]">
+          <img
+            class="thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+            src="img/image-product-1-thumbnail.jpg"
+            alt=""
+            onclick="currentSlide(1)"
+          />
+          <img
+            class="thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+            src="img/image-product-2-thumbnail.jpg"
+            alt=""
+            onclick="currentSlide(2)"
+          />
+          <img
+            class="thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+            src="img/image-product-3-thumbnail.jpg"
+            alt=""
+            onclick="currentSlide(3)"
+          />
+          <img
+            class="thumbnail cursor-pointer size-[95px] rounded-lg hover:opacity-70 transition-all"
+            src="img/image-product-4-thumbnail.jpg"
+            alt=""
+            onclick="currentSlide(4)"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

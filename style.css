@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.open .close{ 
+    display: block;
+}
+
+.open .menu-icon{
+    display: none;
+}
+
+.active {
+    border: 2px solid orange;
+    opacity: .5;
+}
+
