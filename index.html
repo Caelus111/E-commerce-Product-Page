@@ -181,7 +181,21 @@
       <div class="container flex flex-col mx-auto md:my-[89px] md:flex-row">
         <!-- Mobile Gallery -->
         <div class="h-[300px] md:hidden">
-          <img class="w-full h-full" src="img/image-product-1.jpg" alt="" />
+           <!-- Arrows previous-->
+          <div id="prev"
+            class="cursor-pointer after:content-[url('../img/icon-previous.svg')] after:absolute after:left-1 after:top-[25%] after:pt-4 after:p-3 after:bg-white after:rounded-full after:hover:bg-orange-200 transition-colors"
+            onclick="plusSlides(-1)"
+          ></div>
+          <!-- Arrows next -->
+          <div id="next"
+            class=" cursor-pointer before:content-[url('../img/icon-next.svg')] before:absolute before:right-1 before:top-[25%] before:pt-4 before:p-3 before:bg-white before:rounded-full before:hover:bg-orange-200 transition-all"
+            onclick="plusSlides(1)"
+
+          ></div>
+          <img class="w-full h-full mobile-img" src="img/image-product-1.jpg" alt="" />
+          <img class="w-full h-full mobile-img" src="img/image-product-2.jpg" alt="" />
+          <img class="w-full h-full mobile-img" src="img/image-product-3.jpg" alt="" />
+          <img class="w-full h-full mobile-img" src="img/image-product-4.jpg" alt="" />
         </div>
 
         <!-- Desktop Gallery -->
